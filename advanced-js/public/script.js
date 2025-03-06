@@ -1,4 +1,17 @@
-console.log("Hello world !");
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+
+root.render(
+    React.createElement("div", {},
+        React.createElement("h1", {}, "Mon blog"),
+        React.createElement("div", { className: "card" },
+            React.createElement("h2", {}, "Article de blog1"),
+            React.createElement("p", {}, ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat…")
+        )
+    )
+)
+
+/* console.log("Hello world !"); */
 
 /* const notes = [14, 11, 17];
 const notes2 = [8, 14, 16];
