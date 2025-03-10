@@ -1,7 +1,11 @@
-const container = document.getElementById('root');
-const root = ReactDOM.createRoot(container);
+/* const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container); */
 
-root.render(
+let title = <h1>Cours React</h1>;
+console.log(title);
+
+
+/* root.render(
     React.createElement("div", {},
         React.createElement("h1", {}, "Mon blog"),
         React.createElement("div", { className: "card" },
@@ -9,7 +13,8 @@ root.render(
             React.createElement("p", {}, ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat…")
         )
     )
-)
+) */
+
 
 /* console.log("Hello world !"); */
 
