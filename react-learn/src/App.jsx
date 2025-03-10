@@ -1,55 +1,26 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+import './App.css'
+import Button from './components/Button'
+import TaskItem from './components/TaskItem'
 import 'bootstrap/dist/css/bootstrap.css';
-import "./App.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+
+
 
 function App() {
   return (
     <>
-      <h1 className="titre-centre">Liste des tâches à faire</h1>
-
-      <div className="button-container">
-        <button className="button-ajout">Ajouter + </button>
-        <button className="filter-select">Toutes ^ </button>
-      </div>
-
-      <div className="tache-containeur">
-        <div className="tache">
-          <div className="task-container">
-            <input className="checkbox"></input>
-            <span className="task-text">Tache 1 </span>
-
-          </div>
-          <div className="button-actions">
-            <button className="modify-button"><FontAwesomeIcon icon={faEdit} /></button>
-            <button className="delete-button"><FontAwesomeIcon icon={faTrash} /></button>
-          </div>
+      <div className="container">
+        <h1 className="title">Liste des tâches à réaliser</h1>
+        <div className="actions-bar">
+          <Button color="primary" handleClick={() => console.log("Bouton Ajouter")}>Ajouter <FontAwesomeIcon icon={faPlus} /></Button>
+          <Button color="secondary">Toutes <FontAwesomeIcon icon={faAngleDown} /></Button>
         </div>
-
-        <div className="tache">
-          <div className="task-container">
-            <input className="checkbox"></input>
-            <span className="task-text">Tache 2 </span>
-
-          </div>
-          <div className="button-actions">
-            <button className="modify-button"><FontAwesomeIcon icon={faEdit} /></button>
-            <button className="delete-button"><FontAwesomeIcon icon={faTrash} /></button>
-          </div>
+        <div className="task-container">
+          <TaskItem />
+          <TaskItem />
+          <TaskItem />
         </div>
-
-        <div className="tache">
-          <div className="task-container">
-            <input className="checkbox"></input>
-            <span className="task-text">Tache 3 </span>
-
-          </div>
-          <div className="button-actions">
-            <button className="modify-button"><FontAwesomeIcon icon={faEdit} /></button>
-            <button className="delete-button"><FontAwesomeIcon icon={faTrash} /></button>
-          </div>
-        </div>
-
       </div>
     </>
   )
