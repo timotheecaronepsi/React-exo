@@ -1,6 +1,7 @@
-import './App.css'
-import Button from './components/Button'
-import TaskItem from './components/TaskItem'
+import './App.css';
+import Button from './components/Button';
+import TaskItem from './components/TaskItem';
+import Compteur from './components/Compteur';
 import 'bootstrap/dist/css/bootstrap.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faAngleDown } from "@fortawesome/free-solid-svg-icons";
@@ -21,6 +22,7 @@ function App() {
           <TaskItem />
           <TaskItem />
         </div>
+        <Compteur />
       </div>
     </>
   )
