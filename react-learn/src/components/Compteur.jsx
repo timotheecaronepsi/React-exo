@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 
 function Compteur() {
     const [count, setCount] = useState(0);
@@ -21,6 +22,17 @@ function Compteur() {
         setValeurBaseCompteur(Number(event.target.value));
     }
 
+    useEffect(() => {                                   // Création du useEffect.
+        const interval = setInterval(() => {            // Création de l'interval.
+            setCount((currentCount) => {                // On prend le count d'avant pour lui rachouter 1 ce qui 
+                return currentCount + 1                 // est plus pratique qu'avant car on s'assure de rajouter un au chiffre
+            })                                          // de la seconde d'avant au lieu de count.
+        }, 5000)                                        // On effectue cela toute les 1 seconde.
+        return () => {                                  // On retourne aussi clear interval pour que le composant arrête de marché
+            clearInterval(interval)                     // même après avoir était supprimé.
+        }               
+    }, [])                                              // On passe pas rien dans le tableau des dépandances.
+
     return (
         <>
             <div>
@@ -35,7 +47,7 @@ function Compteur() {
             </div>
             <div>
                 <label>Régler la valeur du compteur de base :</label>
-                <input type="number" value={valeurBaseCompteur} onChange={choixCompteurValue}/>
+                <input type="number" value={valeurBaseCompteur} onChange={choixCompteurValue} />
             </div>
         </>
     );
