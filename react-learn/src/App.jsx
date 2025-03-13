@@ -3,6 +3,8 @@ import Button from './components/Button';
 import TaskItem from './components/TaskItem';
 import Compteur from './components/Compteur';
 import DarkTheme from './components/DarkTheme';
+import SimpleInput from './components/UserForm';
+import PseudoForm from './components/PseudoForm';
 import ListeComposants from './components/ListeComposants';
 import 'bootstrap/dist/css/bootstrap.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -26,6 +28,8 @@ function App() {
         </div>
         <Compteur />
         <DarkTheme />
+        <SimpleInput />
+        <PseudoForm />
         <ListeComposants />
       </div>
     </>
